@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BeveragesController">
+   <children>
+      <Label layoutX="54.0" layoutY="59.0" text="Create new beverage:" />
+      <TextField fx:id="addBeverageTextField" layoutX="54.0" layoutY="84.0" promptText="name" />
+      <TextField fx:id="addBeveragePriceTextField" layoutX="54.0" layoutY="119.0" promptText="price" />
+      <Button fx:id="addBeverageButton" layoutX="54.0" layoutY="325.0" mnemonicParsing="false" onAction="#addNewBeverage" prefHeight="25.0" prefWidth="149.0" text="Add" />
+      <Label layoutX="339.0" layoutY="59.0" text="List of beverages:" />
+      <TableView fx:id="beveragesTableView" layoutX="339.0" layoutY="81.0" prefHeight="296.0" prefWidth="250.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="componentsColumn" prefWidth="99.0" text="Components" />
+        </columns>
+      </TableView>
+      <Button layoutX="55.0" layoutY="357.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Delete" />
+      <ListView fx:id="componentsListView" layoutX="55.0" layoutY="181.0" onMouseClicked="#componentsListViewSelection" prefHeight="136.0" prefWidth="200.0" />
+      <Label layoutX="54.0" layoutY="154.0" text="Choose components:" />
+      <Label fx:id="listViewClickedLablel" layoutX="54.0" layoutY="433.0" />
+      <Button fx:id="nextButton" layoutX="576.0" layoutY="407.0" mnemonicParsing="false" onAction="#nextPage" text="Next-&gt;" />
+      <Button layoutX="55.0" layoutY="407.0" mnemonicParsing="false" text="&lt;-Back" />
+   </children>
+</AnchorPane>

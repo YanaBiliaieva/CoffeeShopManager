@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="421.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrdersController">
+   <children>
+      <TableView fx:id="ordersTable" layoutX="10.0" layoutY="29.0" prefHeight="200.0" prefWidth="951.0">
+        <columns>
+          <TableColumn fx:id="orderNumber" prefWidth="42.0" text="№" />
+          <TableColumn fx:id="beverageNameColumn" text="Beverage" />
+            <TableColumn fx:id="beverageQuantityColumn" prefWidth="64.0" text="BQuanity" />
+            <TableColumn fx:id="beveragePriceColumn" prefWidth="64.0" text="BPrice" />
+            <TableColumn fx:id="additionNameColumn" prefWidth="75.0" text="Addition" />
+            <TableColumn fx:id="additionQuantityColumn" prefWidth="65.0" text="AQuantity" />
+            <TableColumn fx:id="additionPriceColumn" prefWidth="72.0" text="APrice" />
+            <TableColumn fx:id="syrupNameColumn" prefWidth="70.0" text="Syrup" />
+            <TableColumn fx:id="syrupQuantityColumn" prefWidth="69.0" text="SQuantity" />
+            <TableColumn fx:id="syrupPriceColumn" prefWidth="54.0" text="SPrice" />
+            <TableColumn fx:id="dateColumn" prefWidth="170.0" text="Date And Time" />
+            <TableColumn fx:id="totalOrderPrice" prefWidth="125.0" text="Total Order Price" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="beverageChoiceBox" layoutX="10.0" layoutY="268.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="additionChoiceBox" layoutX="204.0" layoutY="268.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="syrupChoiceBox" layoutX="393.0" layoutY="268.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="beveragesQuantityChoiceBox" layoutX="10.0" layoutY="323.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="quantityAdditionChoiceBox" layoutX="204.0" layoutY="323.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="syrupQuantityChoiceBox" layoutX="393.0" layoutY="323.0" prefWidth="150.0" />
+      <Button fx:id="addOrderButton" layoutX="12.0" layoutY="376.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="531.0" text="Add Order" />
+      <Button fx:id="deleteOrderButton" layoutX="837.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Delete Order" />
+      <Button fx:id="saveOrdersButton" layoutX="837.0" layoutY="311.0" mnemonicParsing="false" text="Save All Orders to txt" />
+      <Label layoutX="14.0" layoutY="242.0" text="Beverage" />
+      <Label layoutX="204.0" layoutY="303.0" text="Quantity" />
+      <Label layoutX="14.0" layoutY="303.0" text="Quanity" />
+      <Label layoutX="393.0" layoutY="303.0" text="Quantity" />
+      <Label layoutX="393.0" layoutY="244.0" text="Syrup" />
+      <Label layoutX="204.0" layoutY="244.0" text="Addition" />
+      <Label fx:id="totalOrdersLabel" layoutX="637.0" layoutY="260.0" text="Total Orders price Label" />
+      <Button fx:id="deleteAllOrdersButton" layoutX="837.0" layoutY="348.0" mnemonicParsing="false" text="Delete ALL Orders" />
+      <Button fx:id="logOutButton" layoutX="837.0" layoutY="388.0" mnemonicParsing="false" text="Log Out" />
+      <Label fx:id="isConnected" layoutX="637.0" layoutY="380.0" />
+   </children>
+</AnchorPane>

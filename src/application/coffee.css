@@ -1,0 +1,14 @@
+.root{
+    -fx-background-color:papayawhip;
+    -fx-font-size: 12;
+
+}
+.label{
+    -fx-text-fill: rgba(10,7,8,0.98);
+}
+.button{
+    -fx-background-radius: 4;
+}
+#bold-label{
+    -fx-font-weight: bold;
+}

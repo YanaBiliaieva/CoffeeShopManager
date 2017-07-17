@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="componentsNext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="526.0" styleClass="coffee.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ComponentsController">
+   <top>
+      <VBox prefHeight="275.0" prefWidth="563.0" styleClass="coffee.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="userLabel" text="User welcome">
+               <VBox.margin>
+                  <Insets left="15.0" top="6.0" />
+               </VBox.margin></Label>
+            <HBox prefHeight="227.0" prefWidth="527.0" styleClass="coffee.css">
+               <children>
+                  <VBox prefHeight="233.0" prefWidth="196.0">
+                     <children>
+                        <Label text="Component:">
+                           <VBox.margin>
+                              <Insets bottom="6.0" left="15.0" top="6.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="addComponentTextField" mouseTransparent="true" prefHeight="25.0" prefWidth="149.0" promptText="name">
+                           <VBox.margin>
+                              <Insets bottom="6.0" left="15.0" right="22.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextArea>
+                        <Button fx:id="addComponentButton" mnemonicParsing="false" onAction="#addComponent" prefHeight="25.0" prefWidth="158.0" text="Add">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" top="6.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="deleteComponentButton" mnemonicParsing="false" onAction="#deleteComponent" prefHeight="25.0" prefWidth="158.0" text="Delete">
+                           <VBox.margin>
+                              <Insets bottom="6.0" left="15.0" right="20.0" top="6.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="227.0" prefWidth="236.0">
+                     <children>
+                        <Label text="List of components:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="6.0" left="15.0" top="6.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="componentsTable" onMouseClicked="#setCellValueFromTableToTextField" prefHeight="199.0" prefWidth="192.0">
+                          <columns>
+                            <TableColumn fx:id="listOfComponents" prefWidth="240.0" text="Name" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#signOut" text="Log Out">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin></Button>
+                        <Region prefHeight="226.0" prefWidth="42.0">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin></Region>
+                        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="60.0" text="Next-&gt;">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin></Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Label fx:id="isConnected" prefHeight="17.0" prefWidth="503.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
